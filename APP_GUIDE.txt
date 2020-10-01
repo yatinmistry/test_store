@@ -1,0 +1,87 @@
+Backend : 
+---------------------------------------------------
+URL: http://localhost:81/test_store/backend/web/index.php/site/login
+
+Backend and API Credentials are same,
+username : yatin.mistry
+password : yatin123
+
+
+
+API : Get Product List : 
+-------------------------------------------------------
+URL : http://localhost:81/test_store/backend/web/index.php/api/products/get-products
+Request Method : GET
+Headers : "Authorization: Basic eWF0aW4ubWlzdHJ5OnlhdGluMTIz"
+
+Response : 
+{
+    "status": true,
+    "message": "Products retrieved successfully",
+    "data": {
+        "image_base_url": "http://localhost:81/test_store/backend/web/uploads/",
+        "products": [
+            {
+                "id": "1",
+                "name": "Products 1",
+                "price": "100",
+                "productImages": [
+                    {
+                        "id": "1",
+                        "product_id": "1",
+                        "image_name": "5f75eda666d99-mobile-1.jpg"
+                    },
+                    {
+                        "id": "2",
+                        "product_id": "1",
+                        "image_name": "5f75eda66ad58-mobile-2.jpg"
+                    },
+                    {
+                        "id": "3",
+                        "product_id": "1",
+                        "image_name": "5f75eda66c03e-mobile-3.jpg"
+                    },
+                    {
+                        "id": "4",
+                        "product_id": "1",
+                        "image_name": "5f75eff356a7f-shoes-1.jpg"
+                    }
+                ]
+            },
+            {
+                "id": "2",
+                "name": "Mobiles",
+                "price": "1000",
+                "productImages": [
+                    {
+                        "id": "5",
+                        "product_id": "2",
+                        "image_name": "5f75f070bf2e2-mobile-1.jpg"
+                    },
+                    {
+                        "id": "6",
+                        "product_id": "2",
+                        "image_name": "5f75f070c2c00-mobile-2.jpg"
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+
+API : Add To Cart 
+----------------------------------
+URL : http://localhost:81/test_store/backend/web/index.php/api/products/add-to-cart
+Request Method : POST
+Headers : "Authorization: Basic eWF0aW4ubWlzdHJ5OnlhdGluMTIz"
+Request : 
+	product_id : 1
+	quantity: 1
+
+Response : 
+{
+    "status": true,
+    "message": "Product successfully added to cart",
+    "data": []
+}
